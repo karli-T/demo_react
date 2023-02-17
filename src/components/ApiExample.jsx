@@ -3,8 +3,8 @@ import "../App.css";
 
 class ApiExample extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
         email: "",
         password: "",
@@ -97,7 +97,7 @@ class ApiExample extends React.Component {
             <p>Enter Email:</p>
             <input type="text" onChange={this.getEmail} value={this.state.email}/>
             <p>Enter Password:</p>
-            <input type="text" onChange={this.getPassword} value={this.state.password}/>
+            <input type="passwords" onChange={this.getPassword} value={this.state.password}/>
             <br/>
             <button onClick={this.register}>Sign Up!</button>
             <br/>

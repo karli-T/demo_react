@@ -32,14 +32,14 @@ class App extends React.Component {
             <Nav />
 
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/nested" element={<Nested />} />
-              <Route exact path="/counter" element={<Counter />} />   
-              <Route exact path="/iteration" element={<Iteration />} />     
-              <Route exact path="/conditional" element={<Conditional />} />
-              <Route exact path="/input" element={<Input />} />
-              <Route exact path="/props" element={<Props />} />
-              <Route exact path="/api" element={<Api />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/nested" element={<Nested />} />
+              <Route path="/counter" element={<Counter />} />   
+              <Route path="/iteration" element={<Iteration />} />     
+              <Route path="/conditional" element={<Conditional />} />
+              <Route path="/input" element={<Input />} />
+              <Route path="/props" element={<Props />} />
+              <Route path="/api" element={<Api />} />
             </Routes>
 
             {/* <img src={logo} className="App-logo" alt="logo" />

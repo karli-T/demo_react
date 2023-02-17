@@ -3,6 +3,7 @@ import "../App.css";
 import CounterExample from "../components/CounterExample";
 
 class Counter extends React.Component {
+
     render() {
         return (
             <div className="Counter">
@@ -11,6 +12,7 @@ class Counter extends React.Component {
             </div>
         );
     }
+    
 }
 
 export default Counter;

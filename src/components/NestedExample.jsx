@@ -3,13 +3,6 @@ import "../App.css";
 
 class NestedExample extends React.Component{
 
-    constructor(){
-        super();
-        this.state = {
-
-        }
-    }
-
     render(){
         
         return(

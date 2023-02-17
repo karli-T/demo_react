@@ -2,8 +2,8 @@ import React from "react";
 import "../App.css";
 
 class CounterExample extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             count: 0,
         }

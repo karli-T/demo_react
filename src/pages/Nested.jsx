@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import NestedExample from "../components/NestedExample";
+// import ConditionalExample from "../components/ConditionalExample";
 
 class Nested extends React.Component {
     render() {
@@ -21,7 +22,7 @@ class Nested extends React.Component {
                 <p>Here is an example of a nested component:</p>
 
                 <NestedExample />
-
+                {/* <ConditionalExample current_state={true}/> */}
             </div>
         )
     }

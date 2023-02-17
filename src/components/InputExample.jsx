@@ -3,8 +3,8 @@ import "../App.css";
 
 class InputExample extends React.Component{
     
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             name: "",
             input: "",
