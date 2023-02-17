@@ -26,7 +26,7 @@ class ApiExample extends React.Component {
             email: this.state.email,
             password: this.state.password,
             attributes: {
-                username: "TestUser",
+                username: "User",
             }
         })
     })
@@ -57,17 +57,16 @@ class ApiExample extends React.Component {
         fetch("https://webdev.cse.buffalo.edu/hci/api/api/example/posts?sort=newest", {
             method: "GET",
             headers: {
-                'Accept': "*/*",
                 'Authorization': "Bearer " + this.state.token,
             },
         })
         .then(response => response.json())
         .then(result => {
-            // save posts in state
-            // posts are in result.posts[0] because the API returns a nested array
-            // posts are in the first index of the array.
+            // save posts from result in state
+            // posts are in result[0] because the API returns a nested array
+            // posts are in the first index (0) of the array.
             this.setState({
-                posts: result.posts[0],
+                posts: (result[0]),
             });
             console.log("posts retrieved");
             console.log(result);
@@ -102,7 +101,9 @@ class ApiExample extends React.Component {
             <br/>
             <button onClick={this.register}>Sign Up!</button>
             <br/>
-            <button onClick={this.getPosts}>Show Posts!</button>
+            {this.state.token !== "" && <p>Thanks for Signing Up!</p>}
+            <br/>
+            {this.state.token !== "" && <button onClick={this.getPosts}>Show Posts!</button>}
 
             {this.state.posts.map((post) => (
                 <div>

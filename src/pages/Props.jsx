@@ -1,13 +1,11 @@
 import React from "react";
 import "../App.css";
-import Nav from "../components/Nav";
 import PropsExample from "../components/PropsExample";
 
 class Props extends React.Component{
     render(){
         return(
             <div>
-                <Nav />
                 <h1>Props</h1>
                 <p>Props are a way to pass data from one component to another. 
                 <br/>

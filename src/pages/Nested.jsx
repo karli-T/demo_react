@@ -1,13 +1,11 @@
 import React from "react";
 import "../App.css";
-import Nav from "../components/Nav";
 import NestedExample from "../components/NestedExample";
 
 class Nested extends React.Component {
     render() {
         return(
             <div>
-                <Nav />
                 <h1>Nested Components</h1>
                 <p>Nested components are components that are nested inside of other components. 
                 <br/>

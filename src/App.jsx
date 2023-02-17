@@ -11,6 +11,8 @@ import Input from './pages/Input';
 import Props from './pages/Props';
 import Api from './pages/Api';
 
+import Nav from "./components/Nav";
+
 import {
   BrowserRouter as Router, Route, Routes
 } from 'react-router-dom';
@@ -27,6 +29,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="maincontent" id="mainContent">
+            <Nav />
 
             <Routes>
               <Route exact path="/" element={<Home />} />
