@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  background-color: #ffffff;
+  /* min-height: 100vh; */
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  margin-top: 0px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +36,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+div {
+ margin-left: 50px;
+}
+.top_navbar{
+  position:fixed;
+  left:0px;
+  top:0px;
+  height:100%;
+  width:200px;
+  margin-left: 0px;
+
+  /* internally to this container, we want to use flex positioning of the menu elements */
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgba(177, 168, 255, 0.554);
+
+}
+.top_navbar ul{
+   list-style-type: none;
+   padding:10px;
+   margin:0px;
+   margin-top: 40px;
+}
+
+.top_navbar li {
+  border: black 1px solid;
+  padding: 6px;
+  margin-top: 5px;
 }
