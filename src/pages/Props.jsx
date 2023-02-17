@@ -19,7 +19,7 @@ class Props extends React.Component{
                 
                 <PropsExample name="Pearl" animal="giraffe" echo={() => {console.log("ECHO!")}}/>
                 {/* <PropsExample name="Gary" animal="tiger" echo={() => {console.log("Testing")}}/>
-                <PropsExample name="Zeke" animal="sloth" echo={() => {console.log("123")}}/> */}          
+                <PropsExample name="Zeke" animal="sloth" echo={() => {console.log("123")}}/>         */}
             </div>
         )
     }

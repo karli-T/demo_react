@@ -6,7 +6,7 @@ class ConditionalExample extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            current_state: "",
+            current_state: true,
         }
     }
 
@@ -14,8 +14,8 @@ class ConditionalExample extends React.Component{
         
         return(
             <div>
-                {this.props.current_state === "true" && <h3>I'm True</h3>}
-                {this.props.current_state === "false" && <h3>I'm False</h3>}
+                {this.props.current_state && <h3>I'm True</h3>}
+                {!this.props.current_state && <h3>I'm False</h3>}
             </div>
         )
     }

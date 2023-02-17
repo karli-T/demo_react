@@ -9,9 +9,8 @@ class Conditional extends React.Component{
             <div>
                 <Nav />
                 <h1>Conditionals</h1>
-                {/* <ConditionalExample current_state="true"/> */}
-                {/* <ConditionalExample current_state="false"/> */}
-                <ConditionalExample current_state=""/>
+                {/* <ConditionalExample current_state={true}/> */}
+                {/* <ConditionalExample current_state={false}/> */}
             </div>
         )
     }
