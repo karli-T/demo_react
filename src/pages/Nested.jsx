@@ -1,7 +1,8 @@
 import React from "react";
 import "../App.css";
 import NestedExample from "../components/NestedExample";
-// import ConditionalExample from "../components/ConditionalExample";
+import ConditionalExample from "../components/ConditionalExample";
+import InputExample from "../components/InputExample";
 
 class Nested extends React.Component {
     render() {
@@ -17,12 +18,17 @@ class Nested extends React.Component {
                 This makes it easier to read and understand the code. 
                 <br/>
                 <br/>
-                It also makes it easier to debug and fix bugs.</p>
+                It also makes it easier to debug and fix bugs.
+                </p>
                 <br/>
                 <p>Here is an example of a nested component:</p>
 
                 <NestedExample />
-                {/* <ConditionalExample current_state={true}/> */}
+                <br/>
+                {/* <ConditionalExample current_state={true}/>
+                <br/>
+                <InputExample /> */}
+                <br/>
             </div>
         )
     }

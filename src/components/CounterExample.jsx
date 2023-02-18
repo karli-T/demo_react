@@ -8,13 +8,13 @@ class CounterExample extends React.Component {
             count: 0,
         }
     }
-    increment = () => {
+    increase = () => {
         this.setState({
         count: this.state.count + 1,
         });
     };
     
-    decrement = () => {
+    decrease = () => {
         this.setState({
         count: this.state.count - 1,
         });
@@ -25,8 +25,8 @@ class CounterExample extends React.Component {
         <div className="Counter">
             <h2>Here is an example of a counter:</h2>
             <h1>{this.state.count}</h1>
-            <button onClick={this.increment}>Increment</button>
-            <button onClick={this.decrement}>Decrement</button>
+            <button onClick={this.increase}>Increment</button>
+            <button onClick={this.decrease}>Decrement</button>
         </div>
         );
     }

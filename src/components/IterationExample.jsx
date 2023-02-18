@@ -17,7 +17,6 @@ class IterationExample extends React.Component{
                 {this.state.names.map((name) => (
                     <li key={name}>{name}</li>
                 ))}
-                
             </div>
         )
     }
