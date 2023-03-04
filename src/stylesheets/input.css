@@ -1,79 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Poppins:wght@300&display=swap');
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #ffffff;
-  /* min-height: 100vh; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  margin-top: 0px;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-div {
- margin-left: 50px;
-}
-.top_navbar{
-  position:fixed;
-  left:0px;
-  top:0px;
-  height:100%;
-  width:200px;
-  margin-left: 0px;
-
-  display:flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: flex-start;
-
-  background-color: rgba(177, 168, 255, 0.554);
-
-}
-.top_navbar ul{
-   list-style-type: none;
-   padding:10px;
-   margin:0px;
-   margin-top: 40px;
-}
-
-.top_navbar li {
-  border: black 1px solid;
-  padding: 6px;
-  margin-top: 5px;
-}
-
-#input_heading {
+/* #input_heading {
     size: 30px;
     font-family: 'Climate Crisis', cursive;
 }
@@ -95,7 +22,7 @@ div {
   font-family: 'Poppins', sans-serif;
 }
 
-p[attr='prev'] {
+#prev {
     margin-left: 50px;
     margin-right: 50px;
     padding: 10px;
@@ -124,4 +51,12 @@ p[attr='prev'] {
     background-color: #ffffff;
     transform: scale(0.98);
     box-shadow: 3px 2px 20px 1px rgba(0, 0, 0, 0.24);
-}
+} */
+
+/* p {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    background-color: rgba(177, 168, 255, 0.554);
+    color: white;
+} */

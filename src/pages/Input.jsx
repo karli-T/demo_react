@@ -1,13 +1,13 @@
 import React from "react";
-import "../App.css";
+import "../stylesheets/input.css";
 import InputExample from "../components/InputExample";
 
 class Input extends React.Component {
 
     render() {
         return(
-            <div>
-                <h1>Input</h1>
+            <div className="input_container">
+                <h1 id="input_heading">Input</h1>
                 <InputExample />
             </div>
         )
