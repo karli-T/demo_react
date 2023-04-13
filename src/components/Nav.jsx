@@ -18,6 +18,7 @@ class Nav extends React.Component {
                 <li className="tab"><Link to="/input">Input Example</Link></li>
                 <li className="tab"><Link to="/props">Props Example</Link></li>
                 <li className="tab"><Link to="/api">API</Link></li>
+               <li className="tab"><Link to="/datatables">Data Tables</Link></li>
             </ul>
          </div>
       )
