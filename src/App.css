@@ -42,8 +42,9 @@
 }
 
 div {
- margin-left: 50px;
+  margin-left: 40px;
 }
+
 .top_navbar{
   position:fixed;
   left:0px;

@@ -7,7 +7,8 @@ class Home extends React.Component{
             <div>               
                 <h1>Home</h1>
                 <p>This is the home page.</p>
-                <p>Welcome to the first React Tutorial!</p>
+                <p>Welcome to the last React Tutorial!</p>
+                <p>:(</p>
             </div>
         )
     }

@@ -1,51 +1,120 @@
 import React from "react";
 import "../App.css";
-// import "jquery/dist/jquery.min.js";
-// import "datatables.net-dt/js/dataTables.dataTables";
-// import "datatables.net-dt/css/jquery.dataTables.min.css";
-// import "datatables.net-buttons/js/dataTables.buttons.js";
-// import "datatables.net-buttons/js/buttons.colVis.js";
-// import "datatables.net-buttons/js/buttons.flash.js";
-// import "datatables.net-buttons/js/buttons.html5.js";
-// import "datatables.net-buttons/js/buttons.print.js";
-// import $ from "jquery";
+
+import "../stylesheets/datatable.css";
+
 
 import $ from 'jquery';
 import 'datatables.net-dt/css/jquery.dataTables.css';
 import "datatables.net-dt/js/dataTables.dataTables";
 
+import "datatables.net-buttons/js/dataTables.buttons.js";
+import "datatables.net-buttons/js/buttons.colVis.js";
+import "datatables.net-buttons/js/buttons.flash.js";
+import "datatables.net-buttons/js/buttons.html5.js";
+import "datatables.net-buttons/js/buttons.print.js";
+
+
 
 const names = [
     {
-      "title" : "mr",
-      "firstname" : "Lawson",
-      "lastname" : "Luke",
-      "age" : 28,
-      "occupation" : "Software Developer",
-      "hobby" : "coding"
+        "Title" : "Batman Begins",
+        "Director" :  "Christopher Nolan",
+        "Release Date" : 2005,
+        "Box Office" : "$373,700,000",
+        "Rotten Tomatoes" : "84%",
     },
     {
-      "title" : "mr",
-      "firstname" : "Michael",
-      "lastname" : "Jackson",
-      "age" : 35,
-      "occupation" : "Singer",
-      "hobby" : "dancing"
+        "Title" : "The Dark Knight",
+        "Director" :  "Christopher Nolan",
+        "Release Date" : 2008,
+        "Box Office" : "$1,006,000,000",
+        "Rotten Tomatoes" : "94%",
     },
     {
-      "title" : "mr",
-      "firstname" : "Janet",
-      "lastname" : "Jackson",
-      "age" : 35,
-      "occupation" : "Singer",
-      "hobby" : "dancing"
+        "Title" : "The Dark Knight Rises",
+        "Director" :  "Christopher Nolan",
+        "Release Date" : 2012,
+        "Box Office" : "$1,081,000,000",
+        "Rotten Tomatoes" : "87%",
+    },
+    {
+        "Title" : "Man of Steel",
+        "Director" :  "Zack Snyder",
+        "Release Date" : 2013,
+        "Box Office" : "$668,000,000",
+        "Rotten Tomatoes" : "56%",
+    },
+    {
+        "Title" : "Batman v Superman: Dawn of Justice",
+        "Director" :  "Zack Snyder",
+        "Release Date" : 2016,
+        "Box Office" : "$873,000,000",
+        "Rotten Tomatoes" : "29%",
+    },
+    {
+        "Title" : "Justice League",
+        "Director" :  "Zack Snyder",
+        "Release Date" : 2017,
+        "Box Office" : "$657,900,000",
+        "Rotten Tomatoes" : "39%",
+    },
+    {
+        "Title" : "Wonder Woman",
+        "Director" :  "Patty Jenkins",
+        "Release Date" : 2017,
+        "Box Office" : "$822,800,000",
+        "Rotten Tomatoes" : "93%",
+    },
+    {
+        "Title" : "Wonder Woman 1984",
+        "Director" :  "Patty Jenkins",
+        "Release Date" : 2020,
+        "Box Office" : "$169,600,000",
+        "Rotten Tomatoes" : "76%",
+    },
+    {
+        "Title" : "Aquaman",
+        "Director" :  "James Wan",
+        "Release Date" : 2018,
+        "Box Office" : "$1,148,000,000",
+        "Rotten Tomatoes" : "65%",
+    },
+    {
+        "Title" : "Shazam!",
+        "Director" :  "David F. Sandberg",
+        "Release Date" : 2019,
+        "Box Office" : "$367,800,000",
+        "Rotten Tomatoes" : "90%",
+    },
+    {
+        "Title" : "Joker",
+        "Director" :  "Todd Phillips",
+        "Release Date" : 2019,
+        "Box Office" : "$1,074,000,000",
+        "Rotten Tomatoes" : "69%",
+    },
+    {
+        "Title" : "Green Lantern",
+        "Director" :  "Martin Campbell",
+        "Release Date" : 2011,
+        "Box Office" : "$116,600,000",
+        "Rotten Tomatoes" : "26%",
+    },
+    {
+        "Title" : "The Suicide Squad",
+        "Director" : "James Gunn",
+        "Release Date" : 2021, 
+        "Box Office" : "$169,000,000",
+        "Rotten Tomatoes" : "90%",
+
     }
   ]
 
 class DataTables extends React.Component{
 
       componentDidMount() {
-        if (!$.fn.DataTable.isDataTable("#myTable")) {
+        if (!$.fn.DataTable.isDataTable("#DCTable")) {
             setTimeout(function () {
                 $("#table").DataTable({
                     retrieve: true,
@@ -53,24 +122,18 @@ class DataTables extends React.Component{
                     pageLength: 5,
                     paging: true,
                     processing: true,
-                    dom: "Bfrtip",
+                    dom: "Blfrtip",
                     select: {
-                    style: "single",
-                    
+                        style: "single",
                     },
-        
                     buttons: [
                     {
-                        extend: "pageLength",
-                        className: "btn btn-secondary bg-secondary",
-                    },
-                    {
                         extend: "copy",
-                        className: "btn btn-secondary bg-secondary",
+                        className: "btn copy_btn",
                     },
                     {
                         extend: "csv",
-                        className: "btn btn-secondary bg-secondary",
+                        className: "btn csv_btn",
                     },
                     {
                         extend: "print",
@@ -81,31 +144,30 @@ class DataTables extends React.Component{
                             .addClass("compact")
                             .css("font-size", "inherit");
                         },
-                        className: "btn btn-secondary bg-secondary",
+                        className: "btn print_btn",
                     },
                     ],
-        
                     fnRowCallback: function (
                     nRow,
                     aData,
                     iDisplayIndex,
                     iDisplayIndexFull
                     ) {
-                    var index = iDisplayIndexFull + 1;
-                    $("td:first", nRow).html(index);
-                    return nRow;
+                        var index = iDisplayIndexFull + 1;
+                        $("td:first", nRow).html(index);
+                        return nRow;
                     },
         
                     lengthMenu: [
-                        [10, 20, 30, 50, -1],
-                        [10, 20, 30, 50, "All"],
+                        [5,10, 20, 30, 50, -1],
+                        [5,10, 20, 30, 50, "All"],
                     ],
                     columnDefs: [
                     {
                         targets: 0,
                         render: function (data, type, row, meta) {
                         return type === "export" ? meta.row + 1 : data;
-                        },
+                        },                     
                     },
                     ],
                 }, 1000);
@@ -117,16 +179,15 @@ class DataTables extends React.Component{
         try {
           return names.map((item, index) => {
             return (
-                <tr>
-                <td className="text-xs font-weight-bold">{index +1}</td>
-               <td className="text-xs font-weight-bold">{item.title}</td>
-               <td className="text-xs font-weight-bold">{item.firstname+ ' ' + item.lastname}</td>
-               <td className="text-xs font-weight-bold">{item.age}</td>
-               <td className="text-xs font-weight-bold">{item.hobby}</td>
-               <td className="text-xs font-weight-bold">{item.occupation}</td>
-    <td></td>
-    </tr>
-                );
+                <tr id="data_row">
+                    <td>{index +1}</td>
+                    <td>{item["Title"]}</td>
+                    <td>{item["Director"]}</td>
+                    <td>{item["Release Date"]}</td>
+                    <td>{item["Box Office"]}</td>
+                    <td>{item["Rotten Tomatoes"]}</td>
+                </tr>
+            );
           });
         } catch (e) {
           alert(e.message);
@@ -136,21 +197,20 @@ class DataTables extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1>Data Tables</h1>
-                <div class="container-fluid py-4">
-                    <div class="table-responsive p-0 pb-2">
-                        <table id="table" className="table align-items-center justify-content-center mb-0">
+            <div className="datatable_div">
+                <h1>DC Movies</h1>
+                <div className="table-container">
+                    <div className="table-wrapper">
+                        <table id="table" className="DCtable hover stripe">
                             <thead>
-                            <tr>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">S/N</th>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Title</th>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Name</th>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Age</th>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Hobby</th>
-                                <th className="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Occupation</th>
-                                <th></th>
-                            </tr>
+                                <tr id="data_header">
+                                    <th>Order</th>
+                                    <th id="title_header">Title</th>
+                                    <th>Director</th>
+                                    <th>Release Date</th>
+                                    <th>Box Office</th>
+                                    <th>Rotten Tomatoes</th>                            
+                                </tr>
                             </thead>
 
                             <tbody>
