@@ -11,6 +11,7 @@ import Input from './pages/Input';
 import Props from './pages/Props';
 import Api from './pages/Api';
 import DataTables from './pages/DataTables';
+import ReactDataTable from './pages/ReactDataTable';
 
 import Nav from "./components/Nav";
 
@@ -42,6 +43,7 @@ class App extends React.Component {
               <Route path="/props" element={<Props />} />
               <Route path="/api" element={<Api />} />
               <Route path="/datatables" element={<DataTables />} />
+              <Route path="/reactdatatables" element={<ReactDataTable />} />
             </Routes>
             
           </div>

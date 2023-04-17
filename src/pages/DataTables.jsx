@@ -121,11 +121,7 @@ class DataTables extends React.Component{
                     pagingType: "full_numbers",
                     pageLength: 5,
                     paging: true,
-                    processing: true,
                     dom: "Blfrtip",
-                    select: {
-                        style: "single",
-                    },
                     buttons: [
                     {
                         extend: "copy",
@@ -137,38 +133,12 @@ class DataTables extends React.Component{
                     },
                     {
                         extend: "print",
-                        customize: function (win) {
-                        $(win.document.body).css("font-size", "10pt");
-                        $(win.document.body)
-                            .find("table")
-                            .addClass("compact")
-                            .css("font-size", "inherit");
-                        },
                         className: "btn print_btn",
                     },
                     ],
-                    fnRowCallback: function (
-                    nRow,
-                    aData,
-                    iDisplayIndex,
-                    iDisplayIndexFull
-                    ) {
-                        var index = iDisplayIndexFull + 1;
-                        $("td:first", nRow).html(index);
-                        return nRow;
-                    },
-        
                     lengthMenu: [
                         [5,10, 20, 30, 50, -1],
                         [5,10, 20, 30, 50, "All"],
-                    ],
-                    columnDefs: [
-                    {
-                        targets: 0,
-                        render: function (data, type, row, meta) {
-                        return type === "export" ? meta.row + 1 : data;
-                        },                     
-                    },
                     ],
                 }, 1000);
             });
